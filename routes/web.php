@@ -13,14 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::post('register', 'Auth\RegisterController@register');
-Route::post('login', 'Auth\LoginController@api_login');
-Route::get('logout', 'Auth\LoginController@api_logout');
-Route::get('user/self', 'Auth\UserController@get_self');
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+//
+// Route::post('register', 'Auth\RegisterController@register');
+// Route::post('login', 'Auth\LoginController@api_login');
+// Route::get('logout', 'Auth\LoginController@api_logout');
+// Route::get('user/self', 'Auth\UserController@get_self');
+// Route::get('chat', 'ChatController@get_messages');
+// Route::post('chat', 'ChatController@create');
 
 // Route::get('/', function () {
 //     return view('welcome');
