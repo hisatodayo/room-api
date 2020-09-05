@@ -20,9 +20,8 @@ class ChatController extends Controller
     {
         $inputs = $request->validate([
             'user_id' => 'required|integer',
-            // 'photo' => 'nullable|file|image|mimes:jpeg,png,jpg,gif|max:2048',
             'photo' => 'nullable|file|mimes:jpeg,png,jpg,gif,mp4,mp4v,mpg4,3gp|max:51200',
-            'message' => 'required|string'
+            'message' => 'nullable|string'
         ]);
 
         $image_path = '';
